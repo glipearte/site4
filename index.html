@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glipearte - Pegue e Monte</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root { --primary: #6c63ff; --secondary: #b21f1f; }
+        body { font-family: 'Open Sans', sans-serif; }
+        .nav-link { font-weight: 600; color: #333; }
+        .hero-section { background: linear-gradient(135deg, #6c63ff 0%, #a389ff 100%); color: white; padding: 100px 0; }
+        .service-card { border: none; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; }
+        .service-card:hover { transform: translateY(-10px); }
+        .footer { background: #333; color: white; padding: 50px 0; }
+        .payment-icons img { height: 30px; margin: 5px; filter: grayscale(1) brightness(2); }
+/* Baseado no Template EduWell */
+:root {
+    --primary-color: #6c63ff;
+    --secondary-color: #a389ff;
+    --accent-color: #b21f1f;
+    --white: #ffffff;
+    --light-bg: #f4f3ff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Header & Nav */
+.navbar {
+    padding: 20px 0;
+    transition: all 0.5s;
+}
+
+.navbar-brand img {
+    width: 150px;
+}
+
+/* Hero Section com a curva característica do EduWell */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--white);
+    padding: 120px 0;
+    border-bottom-left-radius: 50% 20px;
+    border-bottom-right-radius: 50% 20px;
+    text-align: center;
+}
+
+/* Cards de Serviços e Kits */
+.service-card {
+    background: var(--white);
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+    transition: 0.4s;
+    border: none;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-15px);
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.price-tag {
+    color: #27ae60;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Seção de Depoimentos */
+.testimonial-section {
+    background-color: var(--light-bg);
+    padding: 80px 0;
+}
+
+.testimonial-item {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    border-left: 5px solid var(--primary-color);
+}
+
+/* Rodapé */
+footer {
+    background: #222;
+    color: #fff;
+    padding: 60px 0 30px;
+}
+
+.payment-icons img {
+    height: 35px;
+    margin: 5px;
+    filter: brightness(1.2);
+}
+/* Estilo da Galeria EduWell */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    transition: transform 0.5s ease;
+    width: 100%;
+    display: block;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(108, 99, 255, 0.9), transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: bottom 0.4s ease;
+}
+
+.gallery-item:hover .overlay {
+    bottom: 0;
+}
+
+.gallery-item .overlay span {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="imagens/logo.png" alt="Glipearte" width="90"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-link"><a class="nav-link" href="#inicio">Início</a></li>
+                    <li class="nav-link"><a class="nav-link" href="portifolio.html">Portfólio</a></li>
+                    <li class="nav-link"><a class="nav-link" href="orcamento.html">Orçamentos</a></li>
+                    <li class="nav-link"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section text-center" id="inicio">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Transforme seu Natal com a Glipearte!</h1>
+            <p class="lead">Decorações incríveis no estilo <strong>Pegue e Monte</strong> para festas inesquecíveis.</p>
+            <a href="orcamento.html" class="btn btn-light btn-lg rounded-pill px-4 mt-3">Ver Kits e Valores</a>
+        </div>
+    </section>
+
+    <section class="container my-5 py-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Nossos Serviços</h2>
+            <p>Tudo o que você precisa para sua celebração</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card service-card p-4 text-center">
+                    <h3>Kits de Festa</h3>
+                    <p>Opções Bronze, Prata e Ouro para Natal e Ano Novo.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card p-4 text-center">
+                    <h3>Painéis e Mesas</h3>
+                    <p>Redondos, retangulares e capas para mesas de diversos tamanhos.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card p-4 text-center">
+                    <h3>Arranjos de Balões</h3>
+                    <p>Arcos desconstruídos, guirlandas e balões temáticos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="container my-5 py-5" id="orcamentos">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold" style="color: var(--primary-color);">Nossos Kits Populares</h2>
+    </div>
+    <div class="row g-4 text-center">
+        <div class="col-md-4">
+            <div class="card service-card">
+                <h3>Kit Bronze</h3>
+                <p>Opções de R$ 80,00 a R$ 200,00</p>
+                <ul class="list-unstyled">
+                    <li>Painel 50cm</li>
+                    <li>Boleiras e Bandejas</li>
+                    <li>Displays de mesa</li>
+                </ul>
+                <a href="orcamento.html" class="btn btn-outline-primary rounded-pill">Ver Detalhes</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card service-card">
+                <h3>Kit Prata</h3>
+                <p class="price-tag">R$ 250,00</p>
+                <p>Painel Redondo 1,20m e 3 Cilindros</p>
+                <a href="orcamento.html" class="btn btn-outline-primary rounded-pill">Ver Detalhes</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card service-card">
+                <h3>Kit Ouro</h3>
+                <p class="price-tag">R$ 350,00</p>
+                <p>Painel Redondo + Painel Retangular</p>
+                <a href="orcamento.html" class="btn btn-outline-primary rounded-pill">Ver Detalhes</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonial-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">O que nossos clientes dizem</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="testimonial-item">
+                    <p>"A decoração de Natal ficou impecável! Super fácil de montar e as peças são de ótima qualidade."</p>
+                    <strong>- Maria Silva</strong>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="testimonial-item">
+                    <p>"Aluguei o kit de Ano Novo e todos os convidados elogiaram. Prático e lindo!"</p>
+                    <strong>- João Santos</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="gallery-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">A Nossa Galeria</h2>
+            <p>Inspirações para o seu Natal e Ano Novo</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="gallery-item">
+                    <img src="imagens2/redondo01.png" alt="Painel Redondo Natal" class="img-fluid">
+                    <div class="overlay">
+                        <span>Painéis Redondos</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="gallery-item">
+                    <img src="imagens2/cilindros01.png" alt="Cilindros Natal" class="img-fluid">
+                    <div class="overlay">
+                        <span>Cilindros Temáticos</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="gallery-item">
+                    <img src="imagens/kit_ouro.png" alt="Kit Ouro Natal" class="img-fluid">
+                    <div class="overlay">
+                        <span>Kit Ouro Completo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="gallery-item">
+                    <img src="imagens/capas_para_duas_mesas.png" alt="Capas de Mesa" class="img-fluid">
+                    <div class="overlay">
+                        <span>Capas para Mesas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="gallery-item">
+                    <img src="imagens2/retangular01.png" alt="Painel Retangular" class="img-fluid">
+                    <div class="overlay">
+                        <span>Painéis Retangulares</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="gallery-item">
+                    <img src="imagens/baloes2.png" alt="Arranjo de Balões" class="img-fluid">
+                    <div class="overlay">
+                        <span>Arranjos de Balões</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer class="footer mt-5" id="contato">
+        <div class="container text-center">
+            <h4 class="mb-4">Entre em contato:</h4>
+            <div class="mb-4">
+                <a href="http://wa.me/5585986853750" class="btn btn-success rounded-pill me-2">WhatsApp</a>
+                <a href="http://www.instagram.com/glipearte" class="btn btn-danger rounded-pill">Instagram</a>
+            </div>
+            <div class="payment-icons mb-4">
+                <p>Aceitamos:</p>
+                <img src="imagens/visa.png" alt="Visa">
+                <img src="imagens/mastercard.png" alt="Mastercard">
+                <img src="imagens/pix.png" alt="Pix">
+                <img src="imagens/hipercard.png" alt="Hipercard">
+                <img src="imagens/amex.png" alt="Amex">
+            </div>
+            <p class="small">© 2025 Glipearte - Montagem e entrega por conta do cliente.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
